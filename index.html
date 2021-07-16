@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my portfolio</title>
+</head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background: url('port.jpg');
+background-repeat: no-repeat;
+background-size: cover;
+}
+.main{
+    display: flex;
+    height: 10vh;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+}
+.projects, .profiles{
+    position: relative;
+}
+.projects ul , .profiles ul{
+    display: flex;
+    margin-top: 10px;
+    width: 200px;
+    height: 200px;
+    background:white;
+    
+    border-radius: 30px;
+    align-items: center;
+    justify-content: space-around;
+    transform: translateY(-10px);
+    flex-direction: column;
+    opacity: 0;
+    transition: all 0.4s ease;
+    list-style: none;
+    pointer-events: none;
+    position: absolute;
+}
+.projects a , .profiles a{
+    text-decoration: none;
+    color:black;
+cursor: pointer;
+}
+.main  a{
+    text-decoration: none;
+}
+.main button{
+    border: none;
+    background: none;
+    font-size: 18px;
+}
+.projects button , .profiles  button{
+    background: none;
+    border: none;
+    font-size: 30px;
+    color: white;
+    font-family: 'Dancing Script', cursive;
+}
+li:hover{
+    background:red;
+}
+.projects li , .profiles li{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+.projects button:focus + ul, li, a, .profiles button:focus + ul, li, a{
+        opacity: 1;
+        pointer-events: all;
+        transform: translateY(0px);
+    }
+    
+    .intro{
+        background: black;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .intro-text{
+                   color: rgb(247, 247, 247);
+                   font-family: 'Dancing Script', cursive;
+                   font-size: 3rem;
+
+               }
+    .slider2{
+                background: rgb(18, 195, 201);
+                   position: fixed;
+                   top: 0;
+                   left: 0;
+                   width: 100%;
+                   height: 100%;
+                   display: flex;
+                   justify-content: center;
+                   align-items: center;
+                   transform: translateY(100%); 
+               }
+
+               .hide{
+                   overflow: hidden;
+                   background: black;
+               }
+               .hide span{
+                   transform: translateY(100%);
+                   display: inline-block;
+               }
+</style>
+<body>
+  <nav>
+      <div class="main">
+          <button><a href="#" class="home">HOME</a></button>
+          <div class="projects">
+              <button>PROJECTS</button>
+              <ul>
+                  <li><a href="#">menu</a></li>
+                 <li><a href="calculate.html">calculator</a></li> 
+                  <li><a href="#">film review</a></li>
+              </ul>
+          </div>
+          <div class="profiles">
+              <button>PROFILE</button>
+                  <ul>
+                      <li><a href="#">github</a></li>
+                      <li><a href="#">linkedin</a></li>
+                  </ul>
+              
+          </div>
+      </div>
+  </nav> 
+  
+  
+  <div class="intro">
+<div class="intro-text">
+    <h1 class="hide"><span class="text">HI</span></h1>
+    <h1 class="hide"><span class="text">MY NAME IS</span></h1>
+    <h1 class="hide"><span class="text">ANANDHU</span></h1>
+</div>
+  </div>
+  
+  
+<div class="slider2">
+
+</div>
+  
+ 
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TimelineMax.min.js" integrity="sha512-lJDBw/vKlGO8aIZB8/6CY4lV+EMAL3qzViHid6wXjH/uDrqUl+uvfCROHXAEL0T/bgdAQHSuE68vRlcFHUdrUw==" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js" integrity="sha512-8Wy4KH0O+AuzjMm1w5QfZ5j5/y8Q/kcUktK9mPUVaUoBvh3QPUZB822W/vy7ULqri3yR8daH3F58+Y8Z08qzeg==" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js" integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   
+ <script>
+     var slider=document.querySelector('.slider')
+     var tl=gsap.timeline({defaults:{ease:'power1.out'}})
+     tl.to('.text',{y:'0%',duration:1,stagger:0.25})
+     tl.to('.slider2',{y:'-100%',duration:1,delay:0.5})
+     tl.to('.intro',{y:'-100%',duration:1},'-=1')
+     tl.fromTo('nav',{opacity:0},{opacity:1,duration:1})
+    
+ </script>
+</body>
+
+</html>
