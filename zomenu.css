@@ -754,3 +754,68 @@ color: white;
 font-size: 50px;
 text-decoration: none;
 }
+
+ @media (max-width:576px){
+             
+             .a{
+                 display: flex;
+                 margin-top: 300px;
+                 flex-direction: column;
+                 box-shadow: none;
+                 margin-left: 35%;
+                 
+                 
+
+             }
+             .brandhead{
+                 margin-top: 300px;
+                 
+             }
+             .brands{
+                 flex-direction: column;
+                 margin-top: 300px;
+                 
+                }
+                
+             .places{
+                 margin-top: 100px;
+                 
+             }
+             .services{
+                 margin-top: 350px;
+             }
+             .servi{
+                 margin-top: 100px;
+             }
+             .link{
+                 display: flex;
+                 flex-direction: column;
+                 margin-left: 10%;
+                 
+                 
+                }
+                .link1{
+                    display: flex;
+                flex-direction: column;
+                    margin-left: 10%;
+                    
+                }
+                .item1, .item2, .item3, .item4, .item5, .item5, .item6{
+                    background-size:contain;
+                    width: 100%;
+                    margin-top: 20px;
+                   
+
+                }
+                .modals, .modals1, .modals2, .modals3, .signinmon{
+                    width: 100%;
+                    height: 100%;
+                }
+                .brand4, .brand3, .brand2{
+                    margin-top: 10px;
+                }
+                .sign{
+                    margin-right:30px;
+                }
+                
+         }
